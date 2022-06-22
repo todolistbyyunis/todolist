@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("images/background.jpeg") no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.container {
+    max-width: 500px;
+    min-width: 300px;
+    min-height: 650px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 5em auto;
+    border: 10px solid gray;
+    padding-top: 2em;
+    background: rgba(86, 100, 89, 0.4);
+}
+
+.col {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+h2 {
+    font-size: 3em;
+    font-family: 'Lobster', cursive;
+}
+
+p {
+    font-family: 'Merienda', cursive;
+    width: 300px;
+}
+
+.inputArea {
+    width: 150px;
+    max-width: 200px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
+    font-family: 'Merienda', cursive;
+    font-size: 1em;
+    word-wrap: break-word;
+}
+
+
+#addButton {
+    background-color: rgba(86, 100, 89, 0);
+    border: none;
+    height: 32px;
+    width: 32px;
+    border-radius: 2em;
+}
+#addButton:hover {
+    background-color: rgba(86, 100, 89, 0.2);
+}
+
+.form , .former{
+    min-height: 50px;
+    min-width: 300px;
+    margin-top: 10px;
+    border: 1px solid gray;
+    border-radius: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.imgPlus{
+    height: 18px;
+    width: 18px;
+}
+
+.tasks {
+    min-height: 106px;
+}
+
+.canceled {
+    background-color: rgba(156, 22, 22, 0.5);
+    color: aliceblue;
+}
+
+.canceled .inputArea{
+    text-decoration:line-through;
+}
+
+.completed {
+    background-color: rgba(22, 156, 38, 0.5);
+    color: aliceblue;
+}
+
+.completed .inputArea {
+    text-decoration: underline;
+}
+
+#deleteTasker {
+    height: 19px;
+    width: 84.5px;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#phone {
+    margin: 5px auto;
+}
+
+#deleteTasker {
+    margin: 5px auto;
+    cursor:pointer;
+    font-family: 'Merienda', cursive;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 5px;
+}
+#deleteTasker:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.buttons>img {
+    margin-left: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+/*   ----tabs---- */
+.tabs {
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabs > div {
+    font-family: 'Merienda', cursive;
+    font-size: 1em;
+}
+
+.tabs>input[type="radio"] {
+    display: none;
+}
+
+.tabs>input[type="radio"]:checked+label {
+    font-weight: bold;
+    cursor: default;
+    color: aliceblue;
+    background-color: rgba(49, 46, 46, 0.5);
+    border-radius: 5px 5px 0px 0px;
+}
+
+.tabs .tasks {
+    display: none;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    max-width: 300px;
+    flex-direction: column;
+}
+
+#tab-btn-1:checked~#process,
+#tab-btn-2:checked~#completed,
+#tab-btn-3:checked~#canceled {
+    display: flex;
+}
+
+.tabs>label {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    padding: 5px;
+    font-size: 18px;
+    line-height: 1.5;
+    transition: color 0.15s ease-in-out;
+    margin-left: 6px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+.buttonChangerCompleted,
+.buttonChangerCanceled,
+.buttonChangerProcess {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+}
+.buttonChangerCompleted:hover,
+.buttonChangerCanceled:hover,
+.buttonChangerProcess:hover {
+    background-color: gray;
+    border-radius: 5px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Merienda:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <template>
+        <div class="form">
+            <div class="col">
+                <p class="inputArea"></p>                  
+            </div>
+            <div class="col settings">
+                <div class="buttons">
+                    <img class="buttonChangerCompleted" id="completed" src="img/qalocka.png" tabindex="0">
+                    <img class="buttonChangerCanceled" id="canceled" src="img/krest1.png" tabindex="0">
+                </div>
+                <button id="deleteTasker">delete</button>
+            </div>
+        </div>
+    </template>
+    <div class="container">
+        <div class="col"><h2>ToDoList</h2></div>
+        <div class="col"><p>Easy and practical site for reminders</p></div>
+        <div class="col">
+            <div class="former">
+                <textarea type="text" id="inputer" class="inputArea" placeholder="(ctrl+enter for fast task adding :3)"></textarea>
+                <button id="addButton" class="btn"><img class="imgPlus" src="img/plus.png" alt="Значок добавить"></button>
+            </div>
+        </div>
+        <div class="col"><hr width="300px" size="2px" color="gray"></div>
+        <div class="coltasks col">
+            <div class="tabs">
+                <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked >
+                <label tabindex="0" for="tab-btn-1">Processing</label>
+                <input type="radio" name="tab-btn" id="tab-btn-2" value="" >
+                <label tabindex="0" for="tab-btn-2">Completed</label>
+                <input type="radio" name="tab-btn" id="tab-btn-3" value="" >
+                <label tabindex="0" for="tab-btn-3">Canceled</label>
+            
+                <div class="tasks" id="process">
+                </div>
+                <div class="tasks" id="completed">
+                </div>
+                <div class="tasks" id="canceled">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
